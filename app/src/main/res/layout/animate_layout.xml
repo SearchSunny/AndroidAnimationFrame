@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 如果不设置高度默认为0 ，则任何内容都不会显示出来。 -->
+    <com.androidanimationframe.AnimateLayout
+        android:id="@+id/animate_layout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"/>
+</LinearLayout>
