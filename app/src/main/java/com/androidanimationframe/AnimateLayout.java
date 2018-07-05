@@ -48,6 +48,12 @@ public class AnimateLayout extends LinearLayout {
         mHandler.postDelayed(runnable,300);
     }
 
+    public void stopAnimate(){
+        Log.d("MV","停止自定义动画==================");
+        //imageView.animate().setDuration(500);
+        mHandler.removeCallbacks(runnable);
+    }
+
     public Runnable runnable = new  Runnable(){
         @Override
         public void run() {
@@ -74,5 +80,13 @@ public class AnimateLayout extends LinearLayout {
     public interface AnimateEndListener{
 
         void animateEnd();
+    }
+
+    @Override
+    protected void onWindowVisibilityChanged(int visibility) {
+        super.onWindowVisibilityChanged(visibility);
+        if (visibility == GONE){
+            stopAnimate();
+        }
     }
 }

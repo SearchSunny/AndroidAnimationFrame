@@ -172,7 +172,8 @@ public class MainActivity extends AppCompatActivity implements AnimateLayout.Ani
     @Override
     public void animateEnd() {
         viewCount++;
-        handler.sendEmptyMessage(1000);
+        //handler.sendEmptyMessage(1000);
+        handler.sendEmptyMessageDelayed(1000,500);
     }
 
     @Override
